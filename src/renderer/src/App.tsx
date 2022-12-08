@@ -1,6 +1,7 @@
 import { ReactElement } from 'react'
 import { Header } from './components/Header'
 import { Sidebar } from './components/Sidebar'
+import { AppRoutes } from './Routes'
 import './styles/global.css'
 
 export const App = (): ReactElement => {
@@ -9,9 +10,7 @@ export const App = (): ReactElement => {
       <Sidebar />
       <div className="flex-1 flex flex-col max-h-screen">
         <Header />
-        <main className="flex-1 flex items-center justify-center text-rotion-400">
-          Select or create a document
-        </main>
+        <AppRoutes />
       </div>
     </div>
   )
