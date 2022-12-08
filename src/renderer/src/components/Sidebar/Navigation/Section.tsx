@@ -1,9 +1,9 @@
 import { ReactNode } from 'react'
 
-interface SectionProps {
+type SectionProps = {
   children: ReactNode
 }
 
-export function Section(props: SectionProps) {
+export const Section = (props: SectionProps) => {
   return <div className="flex flex-col gap-2" {...props} />
 }

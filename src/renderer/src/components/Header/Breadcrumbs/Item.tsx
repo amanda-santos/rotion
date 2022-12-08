@@ -1,12 +1,12 @@
 import { ReactNode } from 'react'
 import clsx from 'clsx'
 
-interface ItemProps {
+type ItemProps = {
   isActive?: boolean
   children: ReactNode
 }
 
-export function Item({ isActive = false, children }: ItemProps) {
+export const Item = ({ isActive = false, children }: ItemProps) => {
   const Comp = isActive ? 'span' : 'a'
 
   return (

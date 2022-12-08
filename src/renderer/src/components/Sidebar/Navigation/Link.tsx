@@ -2,11 +2,11 @@ import clsx from 'clsx'
 import { DotsThree } from 'phosphor-react'
 import { ReactNode } from 'react'
 
-interface LinkProps {
+type LinkProps = {
   children: ReactNode
 }
 
-export function Link({ children }: LinkProps) {
+export const Link = ({ children }: LinkProps) => {
   return (
     <a
       href="#"

@@ -1,10 +1,10 @@
 import { ReactNode } from 'react'
 
-interface SectionTitleProps {
+type SectionTitleProps = {
   children: ReactNode
 }
 
-export function SectionTitle(props: SectionTitleProps) {
+export const SectionTitle = (props: SectionTitleProps) => {
   return (
     <div
       className="text-rotion-300 mx-3 uppercase text-xs font-semibold"

@@ -1,3 +1,3 @@
-export function HiddenItems() {
+export const HiddenItems = () => {
   return <span>...</span>
 }

@@ -1,9 +1,9 @@
 import { ReactNode } from 'react'
 
-interface ToCLinkProps {
+type ToCLinkProps = {
   children: ReactNode
 }
 
-export function ToCLink(props: ToCLinkProps) {
+export const ToCLink = (props: ToCLinkProps) => {
   return <a href="#" className="hover:text-rotion-50" {...props} />
 }

@@ -1,6 +1,6 @@
 import { CaretDown, User } from 'phosphor-react'
 
-export function Profile() {
+export const Profile = () => {
   const isAuthenticated = false
 
   if (!isAuthenticated) {
@@ -9,7 +9,7 @@ export function Profile() {
         <div className="h-5 w-5 rounded-sm bg-rotion-500 p-1">
           <User className="h-3 w-3 text-rotion-300" />
         </div>
-        Fazer login
+        Sign in
       </button>
     )
   }

@@ -2,12 +2,12 @@ import { Command } from 'cmdk'
 import { File, MagnifyingGlass } from 'phosphor-react'
 import { useEffect, useState } from 'react'
 
-export function SearchBar() {
+export const SearchBar = () => {
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    const down = (e: KeyboardEvent) => {
-      if (e.key === 'k' && e.metaKey) {
+    const down = (event: KeyboardEvent) => {
+      if (event.key === 'k' && event.metaKey) {
         setOpen((state) => !state)
       }
     }
