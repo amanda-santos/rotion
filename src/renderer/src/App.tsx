@@ -2,5 +2,5 @@ import { ReactElement } from 'react'
 import './styles/global.css'
 
 export const App = (): ReactElement => {
-  return <h1 className="text-violet-400 text-2xl font-bold">Hello World</h1>
+  return <div className="h-screen w-screen bg-rotion-900 text-rotion-100"></div>
 }
