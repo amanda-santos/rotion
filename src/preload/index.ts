@@ -2,7 +2,14 @@ import { contextBridge, ipcRenderer } from 'electron'
 import { ElectronAPI, electronAPI } from '@electron-toolkit/preload'
 
 import { IPC } from '@shared/constants/ipc'
-import { FetchAllDocumentsResponse } from '@shared/types/ipc'
+import {
+  CreateDocumentResponse,
+  DeleteDocumentRequest,
+  FetchAllDocumentsResponse,
+  FetchDocumentRequest,
+  FetchDocumentResponse,
+  SaveDocumentRequest,
+} from '@shared/types/ipc'
 
 declare global {
   export interface Window {
@@ -11,16 +18,28 @@ declare global {
   }
 }
 
-// Custom APIs for renderer
 const api = {
+  createDocument(): Promise<CreateDocumentResponse> {
+    return ipcRenderer.invoke(IPC.DOCUMENTS.CREATE)
+  },
+
+  deleteDocument(request: DeleteDocumentRequest): Promise<void> {
+    return ipcRenderer.invoke(IPC.DOCUMENTS.DELETE, request)
+  },
+
+  fetchDocument(request: FetchDocumentRequest): Promise<FetchDocumentResponse> {
+    return ipcRenderer.invoke(IPC.DOCUMENTS.FETCH, request)
+  },
+
   fetchDocuments(): Promise<FetchAllDocumentsResponse> {
     return ipcRenderer.invoke(IPC.DOCUMENTS.FETCH_ALL)
   },
+
+  saveDocument(request: SaveDocumentRequest): Promise<void> {
+    return ipcRenderer.invoke(IPC.DOCUMENTS.SAVE, request)
+  },
 }
 
-// Use `contextBridge` APIs to expose Electron APIs to
-// renderer only if context isolation is enabled, otherwise
-// just add to the DOM global.
 if (process.contextIsolated) {
   try {
     contextBridge.exposeInMainWorld('electron', electronAPI)
