@@ -1,5 +1,22 @@
 import { ipcMain } from 'electron'
 
-ipcMain.on('fetch-documents', (event, params) => {
-  console.log(params)
+ipcMain.handle('fetch-documents', async () => {
+  return [
+    {
+      id: '1',
+      title: 'Document 1',
+    },
+    {
+      id: '2',
+      title: 'Document 2',
+    },
+    {
+      id: '3',
+      title: 'Document 3',
+    },
+    {
+      id: '4',
+      title: 'Document 4',
+    },
+  ]
 })
