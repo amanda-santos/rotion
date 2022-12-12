@@ -1,7 +1,6 @@
 import { BrowserWindow, Menu, Tray } from 'electron'
 import path from 'node:path'
-
-import { IPC } from '@shared/constants/ipc'
+import { IPC } from '../shared/constants/ipc'
 
 export const createTray = (window: BrowserWindow) => {
   const tray = new Tray(path.resolve(__dirname, 'rotionTemplate.png'))
