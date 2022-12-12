@@ -1,7 +1,6 @@
 import { ipcMain } from 'electron'
 import { randomUUID } from 'crypto'
 
-import { IPC } from '@shared/constants/ipc'
 import {
   CreateDocumentResponse,
   DeleteDocumentRequest,
@@ -12,6 +11,7 @@ import {
   SaveDocumentRequest,
 } from '@shared/types/ipc'
 import { store } from './store'
+import { IPC } from '../shared/constants/ipc'
 
 ipcMain.handle(
   IPC.DOCUMENTS.CREATE,
