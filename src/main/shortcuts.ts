@@ -1,4 +1,5 @@
 import { app, BrowserWindow, globalShortcut } from 'electron'
+
 import { IPC } from '../shared/constants/ipc'
 
 export const createShortcuts = (window: BrowserWindow) => {
