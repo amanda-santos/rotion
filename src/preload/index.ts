@@ -1,5 +1,4 @@
 import { contextBridge, ipcRenderer } from 'electron'
-import { ElectronAPI, electronAPI } from '@electron-toolkit/preload'
 
 import { IPC } from '@shared/constants/ipc'
 import {
@@ -13,7 +12,6 @@ import {
 
 declare global {
   export interface Window {
-    electron: ElectronAPI
     api: typeof api
   }
 }
@@ -38,18 +36,23 @@ const api = {
   saveDocument(request: SaveDocumentRequest): Promise<void> {
     return ipcRenderer.invoke(IPC.DOCUMENTS.SAVE, request)
   },
+
+  onNewDocumentRequest(callback: () => void) {
+    ipcRenderer.on(IPC.DOCUMENTS.NEW_DOCUMENT_REQUEST, callback)
+
+    return () => {
+      ipcRenderer.off(IPC.DOCUMENTS.NEW_DOCUMENT_REQUEST, callback)
+    }
+  },
 }
 
 if (process.contextIsolated) {
   try {
-    contextBridge.exposeInMainWorld('electron', electronAPI)
     contextBridge.exposeInMainWorld('api', api)
   } catch (error) {
     console.error(error)
   }
 } else {
-  // @ts-ignore (define in dts)
-  window.electron = electronAPI
   // @ts-ignore (define in dts)
   window.api = api
 }
