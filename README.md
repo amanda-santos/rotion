@@ -59,6 +59,10 @@ Technologies used to develop this project:
 
 
 
+https://user-images.githubusercontent.com/49074930/207175026-c1ac22c1-2617-47a4-b1a3-664119c34e98.mp4
+
+
+
 ## ⌨ Getting started
 
 - Run `npm i` to install the dependencies
