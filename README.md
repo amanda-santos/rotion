@@ -61,8 +61,8 @@ Technologies used to develop this project:
 
 ## ⌨ Getting started
 
-- Run `npm i` or `yarn` to install the dependencies
-- Open the application with `npx expo start`
+- Run `npm i` to install the dependencies
+- Open the application with `npm run dev`
 
 ## 🤔 How to contribute
 
