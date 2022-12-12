@@ -30,30 +30,30 @@
 ## 📝 About the project
 
 <p>
-With Daily Diet you can create a list of foods, drinks and all sorts of meals that you have consumed during the day. You can also add if they are within your diet or not, and view statistics related to your diet. The application is available in English 🇬🇧.
+Rotion is an alternative to Notion built for learning proposes with Electron. The application is available in English 🇬🇧.
 </p>
 
 <p>
-Developed as a challenge of Ignite React Native by <a href="https://rocketseat.com.br/">Rocketseat</a>. 🚀
+Developed during the course Desktop Apps with Electron by <a href="https://rocketseat.com.br/">Rocketseat</a>. 🚀
 </p>
 
 ## 🎨 Layout
 
 <p>
-  Click <a href="https://www.figma.com/file/Lj7w4t2WG6COLmMIQocs8B/rotion-(Copy)?node-id=2%3A12&t=lvRk7ie5kKAhKAWF-1">here</a> to check the layout on Figma.
+  Click <a href="https://www.figma.com/file/F9swHCTv0wblvseZ9uGQh5/Rotion-(Curso-de-Electron)-(Copy)?node-id=1%3A46&t=pfUjq6DZgSRr6CFW-1">here</a> to check the layout on Figma.
 </p>
 
 ## 👩🏻‍💻 Technologies
 
 Technologies used to develop this project:
 
-- React Native
+- Electron
 - TypeScript
-- Styled Components
-- Async Storage
+- React
+- TailwindCSS
+- React Query
+- TipTap Editor
 - Phosphor Icons
-- Date-fns
-- Lodash
 
 ## 🖥 Preview
 
@@ -95,4 +95,4 @@ After your pull request is merged, you can delete your branch
 
 ---
 
-Made with 💚 by Amanda Santos
+Made with 💜 by Amanda Santos

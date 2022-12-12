@@ -1,6 +1,5 @@
 import { contextBridge, ipcRenderer } from 'electron'
 
-import { IPC } from '@shared/constants/ipc'
 import {
   CreateDocumentResponse,
   DeleteDocumentRequest,
@@ -9,6 +8,7 @@ import {
   FetchDocumentResponse,
   SaveDocumentRequest,
 } from '@shared/types/ipc'
+import { IPC } from '../shared/constants/ipc'
 
 declare global {
   export interface Window {
