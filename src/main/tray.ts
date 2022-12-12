@@ -32,7 +32,6 @@ export const createTray = (window: BrowserWindow) => {
       click: () => {
         console.log('Open document 1')
       },
-      accelerator: 'CmdOrCtrl+1',
     },
     {
       type: 'separator',
